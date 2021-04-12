@@ -28,8 +28,8 @@ resource "aws_subnet" "main_subnet" {
 }
 
 resource "aws_elb" "main_lb" {
-  name               = "cloudify-terraform-elb"
-  availability_zones = [ aws_subnet.main_subnet.id ]  # or availability zones
+  name               = "CloudifyELB"
+  availability_zones = [ var.availability_zones ]
 
   listener {
     instance_port     = 8000
