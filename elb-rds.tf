@@ -29,7 +29,7 @@ resource "aws_subnet" "main_subnet" {
 
 resource "aws_elb" "main_lb" {
   name               = "CloudifyELB"
-  availability_zones = [ var.availability_zones ]
+  availability_zones = var.availability_zones
 
   listener {
     instance_port     = 8000
