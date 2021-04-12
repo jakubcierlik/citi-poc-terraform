@@ -5,14 +5,14 @@ terraform {
       version = "3.10.0"
     }
     template = {
-      source = "hashicorp/template"
+      source  = "hashicorp/template"
       version = "2.1.2"
     }
   }
 }
 
 provider "aws" {
-  region = var.aws_region
+  region     = var.aws_region
   access_key = var.access_key
   secret_key = var.secret_key
 }
@@ -66,16 +66,16 @@ resource "aws_elb" "main_lb" {
 }
 
 resource "aws_db_instance" "main_db_rds" {
-  allocated_storage    = 10
+  allocated_storage     = 10
   max_allocated_storage = 60  # enables autoscaling
-  engine               = "mysql"
-  engine_version       = "5.7"
-  instance_class       = "db.t3.micro"
-  identifier           = lower(var.db_name)
-  name                 = var.db_name
-  username             = var.db_username
-  password             = var.db_password
-  deletion_protection  = false
-  skip_final_snapshot  = true  # do not make snapshot before db removal
+  engine                = "mysql"
+  engine_version        = "5.7"
+  instance_class        = "db.t3.micro"
+  identifier            = lower(var.db_name)
+  name                  = var.db_name
+  username              = var.db_username
+  password              = var.db_password
+  deletion_protection   = false
+  skip_final_snapshot   = true  # do not make snapshot before db removal
 }
 
