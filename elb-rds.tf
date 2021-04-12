@@ -71,10 +71,11 @@ resource "aws_db_instance" "main_db_rds" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
+  identifier           = var.db_name
   name                 = var.db_name
   username             = var.db_username
   password             = var.db_password
-  deletion_protection = false
+  deletion_protection  = false
   skip_final_snapshot  = true  # do not make snapshot before db removal
 }
 
