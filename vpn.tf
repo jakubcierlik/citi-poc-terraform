@@ -1,23 +1,3 @@
-# terraform {
-#   required_providers {
-#     aws = {
-#       source  = "hashicorp/aws"
-#       version = "3.10.0"
-#     }
-#     template = {
-#       source = "hashicorp/template"
-#       version = "2.1.2"
-#     }
-#   }
-# }
-
-# provider "aws" {
-#   region = var.aws_region
-#   access_key = var.access_key
-#   secret_key = var.secret_key
-# }
-
-
 # # TODO: sort out networking - vpc and subnet with DB VM and openshift clusters
 # # resource "aws_vpc" "vpc" {
 # #   cidr_block = "10.0.0.0/16"
