@@ -11,5 +11,5 @@ resource "aws_route53_record" "www" {
   name    = var.domain_name
   type    = "A"
   ttl     = "300"
-  records = [var.domain_name]
+  records = ["127.0.0.1"]  # exemplary IP address
 }
