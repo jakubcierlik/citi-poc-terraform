@@ -28,7 +28,7 @@ resource "aws_subnet" "main_subnet" {
 }
 
 resource "aws_elb" "main_lb" {
-  name               = "CloudifyELB"
+  name               = var.elb_name
   availability_zones = var.availability_zones
 
   listener {

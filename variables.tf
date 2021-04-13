@@ -18,6 +18,11 @@ variable "availability_zones" {
   description = "ELB availability zones"
 }
 
+variable "elb_name" {
+  type = string
+  description = "Name of the Elastic Load Balancer to be created"
+}
+
 variable "db_name" {
   type = string
   description = "Name of the database to be created"
